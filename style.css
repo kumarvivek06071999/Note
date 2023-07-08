@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: rgba(225, 231, 241, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-container {
+    display: flex;
+    margin-bottom: 45px;
+    background-color: rgba(255, 255, 255, 255);
+    margin-top: 40px;
+    min-height: 90vh;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.vertical-line {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+
+
+
+.heading {
+    padding: 20px;
+    font-size: 22px;
+}
+
+/* Left side */
+
+.centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    cursor: pointer;
+    margin-top: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    outline: none;
+    border: none;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+}
+
+.multi-color-circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+
+}
+
+.first-circle {
+    background-color: rgba(254, 201, 113, 255);
+    margin-top: 75px;
+
+}
+
+.second-circle {
+    background-color: rgba(254, 155, 114, 255);
+    margin-top: 15px;
+}
+
+.third-circle {
+    background-color: rgba(181, 147, 252, 255);
+    margin-top: 15px;
+}
+
+.fourth-circle {
+    background-color: rgba(0, 212, 253, 255);
+    margin-top: 15px;
+}
+
+.fifth-circle {
+    background-color: rgba(228, 238, 144, 255);
+    margin-top: 15px;
+}
+
+/* right side */
+
+.right-side {
+    width: 100%;
+    padding-inline: 60px;
+    padding-top: 20px;
+}
+
+.search-box i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.search-box input {
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
+.notes-heading {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.content-container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 40px;
+
+}
+
+.content-box {
+    margin: 10px;
+    padding: 30px;
+    border-radius: 20px;
+    height: 300px;
+    background-color: blueviolet;
+    resize: none;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.content-box::placeholder {
+    color: white;
+}
+
+/* Animation  */
+.leMovingBackFromRight span { animation-name: leMovingBackFromRight; transform-origin: bottom }
+@keyframes leMovingBackFromRight {
+    40% { transform: rotate(45deg) }
+    100% {
+        transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0,.9,.7,1.45)
+    }
+}
+
+.elevateRight { animation-name: elevateRight }
+@keyframes elevateRight {
+    from {
+        transform: translateY(100%) rotate(20deg);
+        transform-origin: left;
+    }
+    40% {
+        transform: rotate(-20deg);
+        transform-origin: left;
+    }
+    65% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+}
